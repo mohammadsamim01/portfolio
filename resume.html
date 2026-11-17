@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Samim's graphic design, UI/UX and web portfolio">
+    <title>Samim | Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="site-shell">
+        <header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">&lt;/&gt;</span> SAMIM
+                STUDIO</a><button class="menu-toggle" id="menuToggle">MENU ☰</button>
+            <nav class="nav" id="mainNav"><a class="" href="index.html">HOME</a><a class=""
+                    href="about.html">ABOUT</a><a class="" href="software.html">SOFTWARE</a><a class=""
+                    href="work.html">PROJECTS</a><a class="" href="practice.html">PRACTICE</a><a class="active"
+                    href="resume.html">RESUME</a></nav><a class="contact-top" href="contact.html">CONTACT ME ↗</a>
+        </header>
+        <main>
+            <section class="hero">
+                <div class="hero-copy"><span class="eyebrow">FRESHER PROFILE</span>
+                    <h1>MY CREATIVE<br><span>PROFILE.</span></h1>
+                    <p>A beginner profile focused on graphic design, UI/UX and web development skills. No professional
+                        work experience is claimed.</p>
+                    <div class="actions"><a class="btn" href="contact.html">GET IN TOUCH ↗</a><a class="btn white"
+                            href="resume.html">VIEW RESUME ↓</a></div>
+                    <div class="socials"><!-- Replace # with your Behance profile URL. --><a href="#" aria-label="Behance">Bē</a><a href="#"
+                            aria-label="LinkedIn">in</a><!-- Replace # with your Instagram profile URL. --><a href="#" aria-label="Instagram">◎</a><a
+                            href="mailto:mohammadsamim0771@gmail.com" aria-label="Email">✉</a></div>
+                </div>
+                <div class="hero-visual"><span class="sticker">✳</span>
+                    <div class="photo-frame">
+                        <div class="photo-inner"><span class="avatar-symbol">S.</span><small>RESUME / PROFILE</small>
+                        </div>
+                    </div>
+                    <div class="code-card"><b>&gt; const samim = {</b><br> role: 'Designer',<br> focus: 'UI / UX',<br>
+                        skills: 'Growing',<br> mindset: 'Keep learning'<br><b>}</b></div>
+                </div>
+            </section>
+            <section class="skill-strip">
+                <div class="strip-label">SKILLS<br>→</div>
+                <div class="skill-logo">
+                    <div><strong>Ps</strong>Photoshop</div>
+                </div>
+                <div class="skill-logo">
+                    <div><strong>Ai</strong>Illustrator</div>
+                </div>
+                <div class="skill-logo">
+                    <div><strong>F</strong>Figma</div>
+                </div>
+                <div class="skill-logo">
+                    <div><strong>Xd</strong>Adobe XD</div>
+                </div>
+                <div class="skill-logo">
+                    <div><strong></></strong>HTML / CSS</div>
+                </div>
+                <div class="skill-logo">
+                    <div><strong>Pr</strong>Premiere Pro</div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="resume-grid">
+                    <div class="resume-box">
+                        <h3>EDUCATION & LEARNING</h3>
+                        <p><b>Design & Digital Skills Training</b><br>Learning graphic design applications, UI/UX
+                            fundamentals and web technologies.</p><br>
+                        <p><b>Independent Practice</b><br>Self-initiated projects, assignments and portfolio
+                            development.</p>
+                    </div>
+                    <div class="resume-box">
+                        <h3>CORE SKILLS</h3>
+                        <ul>
+                            <li>Graphic design fundamentals</li>
+                            <li>UI/UX design and wireframing</li>
+                            <li>Prototyping and user flows</li>
+                            <li>Typography and colour theory</li>
+                            <li>HTML and CSS basics</li>
+                            <li>Responsive layout practice</li>
+                            <li>Image editing and composition</li>
+                        </ul>
+                    </div>
+                    <div class="resume-box">
+                        <h3>DESIGN SOFTWARE</h3>
+                        <p>Adobe Photoshop · Adobe Illustrator · CorelDRAW · Figma · Adobe XD</p>
+                    </div>
+                    <div class="resume-box">
+                        <h3>WEB & MEDIA TOOLS</h3>
+                        <p>HTML · CSS · JavaScript basics · WordPress · VS Code · Premiere Pro</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="section-head">
+                    <h2>EXPERIENCE</h2>
+                    <p>FRESHER — NO PROFESSIONAL WORK EXPERIENCE LISTED</p>
+                </div>
+                <div style="padding:0 26px 26px;font:.75rem/1.8 'DM Mono'">Currently building practical experience
+                    through course assignments, independent design concepts and portfolio projects.</div>
+            </section>
+        </main>
+        <section class="contact-block">
+            <div>
+                <h2>LET'S BUILD SOMETHING GREAT TOGETHER.</h2>
+                <p style="font:.72rem 'DM Mono';margin-top:10px">Have an idea, opportunity or feedback? Let's talk.</p>
+            </div><a class="btn white" href="contact.html">GET IN TOUCH ↗</a>
+        </section>
+        <footer class="footer"><a class="footer-brand" href="index.html">&lt;/&gt; SAMIM STUDIO</a>
+            <div class="footer-copy">© 2026 Samim. All rights reserved. Made with curiosity & pixels.</div>
+            <div class="footer-social"><!-- Replace # with your Behance profile URL. --><a href="#" aria-label="Behance">Bē</a><!-- Replace # with your LinkedIn profile URL. --><a href="#" aria-label="LinkedIn">in</a><a
+                    href="#" aria-label="Instagram">◎</a><a href="mailto:mohammadsamim0771@gmail.com" aria-label="Email">✉</a>
+            </div>
+        </footer>
+        <script>
+            const toggle = document.getElementById('menuToggle'), nav = document.getElementById('mainNav'); toggle.addEventListener('click', () => nav.classList.toggle('open')); nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+            const items = document.querySelectorAll('.section,.project-card,.software-card,.practice-card,.resume-box,.about-grid,.side-cert'); items.forEach(x => x.classList.add('reveal')); const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target) } }), { threshold: .12 }); items.forEach(x => io.observe(x));
+        </script>
+    </div>
+</body>
+
+</html>

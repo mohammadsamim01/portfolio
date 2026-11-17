@@ -1,0 +1,617 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice | Samim Studio</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=DM+Mono&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #e9e8e2;
+            color: #111;
+            font-family: 'Space Grotesk', Arial, sans-serif;
+        }
+
+        .container {
+            width: 94%;
+            max-width: 1100px;
+            margin: 20px auto;
+            background: #f7f6f1;
+            border: 3px solid black;
+            box-shadow: 7px 7px black;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #c5f34b;
+            padding: 22px 30px;
+            border-bottom: 3px solid black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        header span {
+            font-family: 'DM Mono';
+            font-size: 12px;
+        }
+
+        /* HERO */
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            border-bottom: 3px solid black;
+        }
+
+        .hero-text {
+            padding: 55px 35px;
+            background-color: white;
+            background-image:
+                linear-gradient(#ddd 1px, transparent 1px),
+                linear-gradient(90deg, #ddd 1px, transparent 1px);
+            background-size: 25px 25px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #7650ef;
+            color: white;
+            padding: 7px 12px;
+            font-family: 'DM Mono';
+            font-size: 12px;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 7vw, 75px);
+            line-height: 1;
+            margin: 20px 0;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .hero h1 span {
+            color: #7650ef;
+        }
+
+        .hero p {
+            font-family: 'DM Mono';
+            font-size: 13px;
+            line-height: 1.8;
+            max-width: 480px;
+        }
+
+        .hero-art {
+            background: #ff7f9f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .art-box {
+            width: 210px;
+            height: 210px;
+            background: #c5f34b;
+            border: 3px solid black;
+            box-shadow: 9px 9px black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 75px;
+            font-weight: 800;
+            transform: rotate(-5deg);
+            animation: float 3s infinite ease-in-out;
+        }
+
+        /* SECTION */
+
+        main {
+            padding: 35px;
+        }
+
+        .section-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            gap: 15px;
+        }
+
+        .section-heading h2 {
+            font-size: 28px;
+            text-transform: uppercase;
+        }
+
+        .section-heading p {
+            font-family: 'DM Mono';
+            font-size: 11px;
+        }
+
+        /* PRACTICE CARDS */
+
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border: 3px solid black;
+            box-shadow: 5px 5px black;
+            overflow: hidden;
+            transition: 0.3s;
+            animation: appear 0.8s ease both;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            box-shadow: 8px 10px black;
+        }
+
+        .card-top {
+            height: 120px;
+            border-bottom: 3px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 45px;
+            font-weight: 800;
+        }
+
+        .pink {
+            background: #ff7f9f;
+        }
+
+        .green {
+            background: #c5f34b;
+        }
+
+        .purple {
+            background: #7650ef;
+            color: white;
+        }
+
+        .yellow {
+            background: #f8d65a;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            font-size: 19px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .card-content p {
+            font-family: 'DM Mono';
+            font-size: 12px;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+
+        .card a {
+            display: inline-block;
+            background: #c5f34b;
+            border: 2px solid black;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: black;
+            font-family: 'DM Mono';
+            font-size: 12px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .card a:hover {
+            background: #7650ef;
+            color: white;
+        }
+
+        /* BOTTOM SECTION */
+
+        .bottom {
+            background: #ff7f9f;
+            padding: 30px;
+            border-top: 3px solid black;
+            text-align: center;
+        }
+
+        .bottom h2 {
+            font-size: 27px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .bottom p {
+            font-family: 'DM Mono';
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: white;
+            padding: 20px;
+            border-top: 3px solid black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'DM Mono';
+            font-size: 11px;
+        }
+
+        footer b {
+            font-family: 'Space Grotesk';
+            font-size: 14px;
+        }
+
+        /* ANIMATIONS */
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(-5deg);
+            }
+            50% {
+                transform: translateY(-12px) rotate(2deg);
+            }
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        /* SHARED PORTFOLIO NAVIGATION */
+        .topbar {
+            display: grid;
+            grid-template-columns: 190px minmax(0, 1fr) 160px;
+            min-height: 58px;
+            padding: 0;
+            background: #fff;
+            border-bottom: 3px solid #101010;
+            align-items: stretch;
+            gap: 0;
+        }
+        .topbar .brand {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            padding: 12px 16px;
+            background: #c5f34b;
+            border-right: 3px solid #101010;
+            color: #101010;
+            font-weight: 800;
+            font-size: .85rem;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .topbar .brand-mark {
+            font-family: 'DM Mono', monospace;
+            font-size: 1.15rem;
+        }
+        .topbar .nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: clamp(10px, 2vw, 24px);
+            padding: 10px;
+        }
+        .topbar .nav a {
+            display: inline-block;
+            padding: 4px 0;
+            background: transparent;
+            border: 0;
+            color: #101010;
+            font: .65rem 'DM Mono', monospace;
+            text-decoration: none;
+            position: relative;
+        }
+        .topbar .nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 3px;
+            background: #7650ef;
+            transition: width .25s ease;
+        }
+        .topbar .nav a:hover::after,
+        .topbar .nav a.active::after { width: 100%; }
+        .topbar .contact-top {
+            display: grid;
+            place-items: center;
+            min-height: 58px;
+            padding: 10px;
+            background: #7650ef;
+            border-left: 3px solid #101010;
+            color: white;
+            font: 700 .68rem 'DM Mono', monospace;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .topbar .contact-top:hover { background: #ff7f9f; color: #101010; }
+        .topbar .menu-toggle {
+            display: none;
+            background: #c5f34b;
+            border: 3px solid #101010;
+            padding: 8px 12px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+        @media (max-width: 850px) {
+            .topbar { grid-template-columns: 160px minmax(0, 1fr) 130px; }
+            .topbar .nav { gap: 10px; }
+            .topbar .nav a { font-size: .56rem; }
+        }
+        @media (max-width: 650px) {
+            .topbar {
+                grid-template-columns: minmax(0, 1fr) auto;
+                flex-direction: initial;
+                gap: 0;
+                padding: 0;
+            }
+            .topbar .brand { border-right: 0; }
+            .topbar .menu-toggle { display: block; margin: 8px; }
+            .topbar .nav {
+                display: none;
+                grid-column: 1 / -1;
+                flex-direction: column;
+                align-items: stretch;
+                border-top: 3px solid #101010;
+                gap: 0;
+            }
+            .topbar .nav.open { display: flex; }
+            .topbar .nav a {
+                padding: 11px 16px;
+                border-bottom: 1px solid #ddd;
+                font-size: .7rem;
+            }
+            .topbar .contact-top {
+                grid-column: 1 / -1;
+                min-height: 42px;
+                border-left: 0;
+                border-top: 3px solid #101010;
+            }
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width: 650px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text {
+                padding: 35px 22px;
+            }
+
+            .hero-art {
+                min-height: 260px;
+            }
+
+            main {
+                padding: 22px;
+            }
+
+            .practice-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-heading {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            header {
+                padding: 18px;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SAME SITE HEADER AS practice.html -->
+    <header class="topbar">
+        <a class="brand" href="index.html"><span class="brand-mark">&lt;/&gt;</span> SAMIM STUDIO</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">MENU ☰</button>
+        <nav class="nav" id="mainNav" aria-label="Main navigation">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="software.html">SOFTWARE</a>
+            <a href="work.html">PROJECTS</a>
+            <a class="active" href="practice.html">PRACTICE</a>
+            <a href="resume.html">RESUME</a>
+        </nav>
+        <a class="contact-top" href="contact.html">CONTACT ME ↗</a>
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <span class="tag">LEARN • CREATE • REPEAT</span>
+
+            <h1>MY<br><span>PRACTICE.</span></h1>
+
+            <p>
+                Welcome to my practice space! Here I collect
+                my HTML and CSS exercises, experiments and
+                small website projects while improving my
+                web development skills.
+            </p>
+
+        </div>
+
+        <div class="hero-art">
+            <div class="art-box">&lt;/&gt;</div>
+        </div>
+
+    </section>
+
+    <!-- PRACTICE PROJECTS -->
+
+    <main>
+
+        <div class="section-heading">
+            <div>
+                <h2>Explore My Work ↘</h2>
+                <p>MY HTML & CSS PRACTICE PROJECTS</p>
+            </div>
+        </div>
+
+        <div class="practice-grid">
+
+            <div class="card">
+                <div class="card-top pink">01</div>
+                <div class="card-content">
+                    <h3>Photo Gallery</h3>
+                    <p>
+                        A collection of images arranged using
+                        HTML and CSS gallery layouts.
+                    </p>
+                    <a href="photosgallery.html">VIEW PROJECT ↗</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-top green">02</div>
+                <div class="card-content">
+                    <h3>HTML Tables</h3>
+                    <p>
+                        Learning how to organise information
+                        using HTML tables and rows.
+                    </p>
+                    <a href="table.html">VIEW PROJECT ↗</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-top purple">03</div>
+                <div class="card-content">
+                    <h3>HTML Lists</h3>
+                    <p>
+                        Practising ordered lists, unordered
+                        lists and nested list structures.
+                    </p>
+                    <a href="list.html">VIEW PROJECT ↗</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-top yellow">04</div>
+                <div class="card-content">
+                    <h3>Registration Form</h3>
+                    <p>
+                        Creating registration forms using
+                        different HTML input elements.
+                    </p>
+                    <a href="regesteration.html">VIEW PROJECT ↗</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-top pink">05</div>
+                <div class="card-content">
+                    <h3>Login Page</h3>
+                    <p>
+                        Designing a simple login interface
+                        with HTML and CSS.
+                    </p>
+                    <a href="login.html">VIEW PROJECT ↗</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-top green">06</div>
+                <div class="card-content">
+                    <h3>Shopping Page</h3>
+                    <p>
+                        A simple shopping website layout
+                        with product sections and cards.
+                    </p>
+                    <a href="shop.html">VIEW PROJECT ↗</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-top purple">07</div>
+                <div class="card-content">
+                    <h3>Home Page</h3>
+                    <p>
+                        My first website page, practising
+                        HTML structure and CSS styling.
+                    </p>
+                    <a href="index.html">VIEW PROJECT ↗</a>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- BOTTOM -->
+
+    <section class="bottom">
+        <h2>Practice Makes Progress.</h2>
+        <p>
+            Every project is another step towards becoming
+            a better web designer and developer.
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <b>&lt;/&gt; SAMIM STUDIO</b>
+        <span>© 2026 | HTML & CSS PRACTICE</span>
+        <span>MADE WITH CREATIVITY ✳</span>
+    </footer>
+
+</div>
+
+</body>
+</html>
